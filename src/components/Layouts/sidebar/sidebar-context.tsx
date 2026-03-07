@@ -32,14 +32,19 @@ export function SidebarProvider({
 }) {
   const [isOpen, setIsOpen] = useState(defaultOpen);
   const isMobile = useIsMobile();
+  const [hasMounted, setHasMounted] = useState(false);
 
   useEffect(() => {
+    if (!hasMounted) {
+      setIsOpen(!isMobile);
+      setHasMounted(true);
+      return;
+    }
+
     if (isMobile) {
       setIsOpen(false);
-    } else {
-      setIsOpen(true);
     }
-  }, [isMobile]);
+  }, [hasMounted, isMobile]);
 
   function toggleSidebar() {
     setIsOpen((prev) => !prev);
