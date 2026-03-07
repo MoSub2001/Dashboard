@@ -1,4 +1,4 @@
-export type BookingType = "booked" | "blocked";
+export type BookingType = "booked" | "blocked" | "requested";
 
 export type Booking = {
   id: string;
