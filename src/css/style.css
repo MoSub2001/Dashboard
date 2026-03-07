@@ -7,6 +7,17 @@
     direction: rtl;
     @apply bg-gray-2 text-dark-5 dark:bg-[#020D1A] dark:text-dark-6;
   }
+
+  html[lang="ar"] body {
+    text-align: right;
+  }
+
+  html[lang="ar"] input,
+  html[lang="ar"] textarea,
+  html[lang="ar"] select {
+    direction: rtl;
+    text-align: right;
+  }
 }
 
 @layer utilities {
