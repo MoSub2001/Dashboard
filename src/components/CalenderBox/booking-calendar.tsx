@@ -256,8 +256,8 @@ export default function BookingCalendar({ role }: BookingCalendarProps) {
       </div>
 
       {pendingBooking && (
-        <div className="fixed inset-0 z-999 flex items-center justify-center bg-dark/60 p-3 backdrop-blur-sm sm:p-4">
-          <div className="max-h-[92vh] w-full max-w-2xl overflow-y-auto rounded-2xl border border-stroke bg-white p-4 shadow-4 dark:border-dark-3 dark:bg-dark-2 sm:p-6">
+        <div className="fixed inset-0 z-999 bg-dark/60 p-4 backdrop-blur-sm">
+          <div className="mx-auto mt-16 w-full max-w-2xl rounded-2xl border border-stroke bg-white p-6 shadow-4 dark:border-dark-3 dark:bg-dark-2">
             <h3 className="mb-2 text-xl font-bold text-dark dark:text-white">
               🎉 Confirm your salon slot
             </h3>
@@ -267,7 +267,7 @@ export default function BookingCalendar({ role }: BookingCalendarProps) {
             </p>
 
             <div className="grid gap-4 rounded-xl bg-gray-1 p-4 dark:bg-dark">
-              <div className="flex flex-col gap-1 border-b border-stroke pb-3 dark:border-dark-3 sm:flex-row sm:items-center sm:justify-between sm:gap-2">
+              <div className="flex items-center justify-between gap-2 border-b border-stroke pb-3 dark:border-dark-3">
                 <span className="text-sm font-semibold text-dark dark:text-white">
                   Service
                 </span>
@@ -275,7 +275,7 @@ export default function BookingCalendar({ role }: BookingCalendarProps) {
                   {DEFAULT_SERVICE}
                 </span>
               </div>
-              <div className="flex flex-col gap-1 border-b border-stroke pb-3 dark:border-dark-3 sm:flex-row sm:items-center sm:justify-between sm:gap-2">
+              <div className="flex items-center justify-between gap-2 border-b border-stroke pb-3 dark:border-dark-3">
                 <span className="text-sm font-semibold text-dark dark:text-white">
                   Date
                 </span>
@@ -288,7 +288,7 @@ export default function BookingCalendar({ role }: BookingCalendarProps) {
                   })}
                 </span>
               </div>
-              <div className="flex flex-col gap-1 border-b border-stroke pb-3 dark:border-dark-3 sm:flex-row sm:items-center sm:justify-between sm:gap-2">
+              <div className="flex items-center justify-between gap-2 border-b border-stroke pb-3 dark:border-dark-3">
                 <span className="text-sm font-semibold text-dark dark:text-white">
                   Hour
                 </span>
@@ -330,7 +330,7 @@ export default function BookingCalendar({ role }: BookingCalendarProps) {
               </div>
             </div>
 
-            <div className="mt-6 flex flex-col-reverse gap-3 sm:flex-row sm:justify-end">
+            <div className="mt-6 flex flex-wrap justify-end gap-3">
               <button
                 type="button"
                 onClick={() => setPendingBooking(null)}
