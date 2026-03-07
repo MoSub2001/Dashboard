@@ -18,7 +18,16 @@ export const NAV_DATA = [
         title: "Calendar",
         url: "/calendar",
         icon: Icons.Calendar,
-        items: [],
+        items: [
+          {
+            title: "Manager",
+            url: "/calendar",
+          },
+          {
+            title: "Customer Booking",
+            url: "/calendar/customer",
+          },
+        ],
       },
       {
         title: "Profile",
